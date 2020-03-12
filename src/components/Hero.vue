@@ -1,11 +1,11 @@
 <template>
-  <header class="hero">
+  <section class="hero">
     <h3 class="hero__subtitle">Hi,</h3>
     <h1 class="hero__title">I'm Sam Chen.</h1>
     <Sash :badges="badges" />
     <h3 class="hero__subtitle">are what I do.</h3>
     <Button href="#" title="My Projects" class="hero__button" />
-  </header>
+  </section>
 </template>
 
 <script>
