@@ -12,12 +12,13 @@
   --color-green: #00a676;
   --color-yellow: #ffbc42;
   --color-white: #eff1ed;
+  --color-light-blue: #38aecc;
+  --color-dark-blue: #022f40;
 
   /* Meaningful Colors */
   --color-primary: #028090;
-  --color-dark: #114b5f;
-  --color-darker: #0b132b;
-  --color-light: var(--color-white);
+  --color-dark: var(--color-dark-blue);
+  --color-light: var(--color-light-blue);
   --color-success: var(--color-green);
   --color-warning: var(--color-yellow);
   --color-danger: var(--color-red);
@@ -29,7 +30,12 @@
   --spacer-large: 3rem;
   --border-radius: .5rem;
 
+  /* Box Shadow */
   --shadow: 0 0 1em rgba(0,0,0,.25);
+
+  /* Transition */
+  --duration-short: 150ms;
+  --ease-primary: ease-in-out;
 }
 
 /* Global Styles */
@@ -42,7 +48,6 @@
 
 body {
   background-color: var(--color-background);
-  margin: 0 var(--spacer);
 }
 
 ul, li {
@@ -53,7 +58,7 @@ ul, li {
 
 * {
   font-family: 'Roboto Mono', monospace;
-  color: var(--color-light);
+  color: var(--color-white);
 }
 
 *::selection {

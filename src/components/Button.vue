@@ -19,7 +19,9 @@ export default {
   border: 1px solid var(--color-accent);
   text-decoration: none;
   border-radius: var(--border-radius);
-  transition: background-color ease-out 150ms, color ease-out 150ms;
+  transition:
+    background-color var(--ease-primary) var(--duration-short),
+    color var(--ease-primary) var(--duration-short);
 }
 
 .button:hover,

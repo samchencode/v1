@@ -24,7 +24,7 @@ export default {
 <style scoped>
 .socialist {
   position: absolute;
-  right: 0;
+  right: var(--spacer);
   top: var(--spacer);
   display: flex;
   flex-direction: column;
@@ -35,7 +35,7 @@ export default {
   height: 50vh;
   margin-top: var(--spacer);
   width: 0;
-  border-left: 2px solid var(--color-light);
+  border-left: 2px solid var(--color-white);
   align-self: center;
 }
 
@@ -45,8 +45,8 @@ export default {
 }
 
 .socialist__icon {
-  color: var(--color-light);
-  transition: color ease-out 150ms;
+  color: var(--color-white);
+  transition: color var(--ease-primary) var(--duration-short);
 }
 
 .socialist__icon:hover,
