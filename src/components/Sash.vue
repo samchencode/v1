@@ -1,19 +1,19 @@
 <template>
   <ul class="sash">
-    <Badge
+    <Label
       v-for="badge in badges"
       :key="badge"
       :title="badge"
-    ></Badge>
+    ></Label>
   </ul>
 </template>
 
 <script>
-import Badge from './Badge.vue';
+import Label from './Label.vue';
 
 export default {
   name: 'Sash',
-  components: { Badge },
+  components: { Label },
   props: {
     badges: Array,
   },

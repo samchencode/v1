@@ -1,10 +1,10 @@
 <template>
-  <li class="badge">{{ title }}</li>
+  <li class="label">{{ title }}</li>
 </template>
 
 <script>
 export default {
-  name: 'Badge',
+  name: 'Label',
   props: {
     title: String,
   },
@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style>
-.badge {
+.label {
   padding: 0.5rem;
   cursor: default;
   background-color: var(--color-primary);
