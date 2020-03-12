@@ -26,6 +26,8 @@ export default {
   height: 100vh;
   max-width: 1000px;
   min-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--spacer);
   /* ! Assuming display size <1000px+2em & >800px+2em */
   display: grid;
   align-content: start;

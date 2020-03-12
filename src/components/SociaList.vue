@@ -24,7 +24,7 @@ export default {
 <style scoped>
 .socialist {
   position: absolute;
-  right: 0;
+  right: var(--spacer);
   top: var(--spacer);
   display: flex;
   flex-direction: column;
