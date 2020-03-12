@@ -20,7 +20,7 @@ export default {
   name: 'App',
   components: { Hero, SociaList, NavBar },
   data: () => ({
-    badges: ['Full Stack App Development', 'Machine Learning'],
+    badges: ['Full Stack Web Development', 'Machine Learning'],
   }),
 };
 </script>
