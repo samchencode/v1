@@ -1,0 +1,66 @@
+/* Global Variables */
+
+:root {
+  /* Colors */
+  --color-black: #272727;
+  --color-orange: #ff6f59;
+  --color-dark-red: #773344;
+  --color-gray: #696d7d;
+  --color-dark-gray: #474448;
+  --color-light-green: #beef9e;
+  --color-red: #f45b69;
+  --color-green: #00a676;
+  --color-yellow: #ffbc42;
+  --color-white: #eff1ed;
+
+  /* Meaningful Colors */
+  --color-primary: #028090;
+  --color-dark: #114b5f;
+  --color-darker: #0b132b;
+  --color-light: var(--color-white);
+  --color-success: var(--color-green);
+  --color-warning: var(--color-yellow);
+  --color-danger: var(--color-red);
+  --color-accent: var(--color-light-green);
+  --color-background: var(--color-dark-gray);
+
+  /* Spacing */
+  --spacer: 1rem;
+  --spacer-large: 3rem;
+  --border-radius: .5rem;
+
+  --shadow: 0 0 1em rgba(0,0,0,.25);
+}
+
+/* Global Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-background);
+  margin: 0 var(--spacer);
+}
+
+ul, li {
+  list-style: none;
+}
+
+/* Typography */
+
+* {
+  font-family: 'Roboto Mono', monospace;
+  color: var(--color-light);
+}
+
+*::selection {
+  background-color: var(--color-green);
+}
+
+a:hover,
+a:focus {
+  color: var(--color-accent);
+}
