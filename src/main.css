@@ -30,7 +30,12 @@
   --spacer-large: 3rem;
   --border-radius: .5rem;
 
+  /* Box Shadow */
   --shadow: 0 0 1em rgba(0,0,0,.25);
+
+  /* Transition */
+  --duration-short: 150ms;
+  --ease-primary: ease-in-out;
 }
 
 /* Global Styles */

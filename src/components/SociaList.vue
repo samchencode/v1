@@ -46,7 +46,7 @@ export default {
 
 .socialist__icon {
   color: var(--color-white);
-  transition: color ease-out 150ms;
+  transition: color var(--ease-primary) var(--duration-short);
 }
 
 .socialist__icon:hover,
