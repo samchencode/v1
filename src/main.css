@@ -47,7 +47,7 @@ body {
 
 #app {
   margin: 0 auto;
-  /* ! Might wanna make this auto later */
+  max-width: 1000px;
 }
 
 ul, li {
