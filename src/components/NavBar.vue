@@ -30,6 +30,7 @@ export default {
   height: 5em;
   padding: 0 1em;
   background-color: var(--color-primary);
+  box-shadow: var(--shadow);
 }
 
 .sitenav__nav {
@@ -59,6 +60,8 @@ export default {
 
 .sitenav__link {
   text-decoration: none;
+  background-color: inherit;
+  transition: background-color var(--ease-primary) var(--duration-short);
 }
 
 .sitenav__link:hover,
