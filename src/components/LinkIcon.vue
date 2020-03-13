@@ -16,7 +16,7 @@ export default {
 
 <style>
 .linkicon {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 0 0.4em;
 }
 
@@ -28,6 +28,12 @@ export default {
 .linkicon__icon:hover,
 .linkicon__icon:hover {
   color: var(--color-accent);
+}
+
+@media screen and (max-width: 350px) {
+  .linkicon {
+    font-size: 1.5em;
+  }
 }
 
 @media screen and (min-width: 800px) {
