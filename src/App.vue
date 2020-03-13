@@ -50,7 +50,7 @@ export default {
   position: relative;
 }
 
-.content__section {
+.content__section:not(:nth-child(2)) {
   height: 80vh; /* probably need to remove this later */
   display: grid;
 }
