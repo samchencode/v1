@@ -98,13 +98,10 @@ export default {
 .card__image {
   height: 100%;
   width: 100%;
-  object-fit: cover;
   grid-row: 1 / 3;
-}
-
-.card__image {
   background-blend-mode: multiply;
-  background-image: url('//unsplash.it/600');
+  background: url('//unsplash.it/600') no-repeat fixed center;
+  background-size: cover;
 }
 
 .card:nth-child(odd) .card__image {
