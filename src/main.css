@@ -12,12 +12,13 @@
   --color-green: #00a676;
   --color-yellow: #ffbc42;
   --color-white: #eff1ed;
+  --color-blue: #028090;
   --color-light-blue: #38aecc;
   --color-dark-blue: #022f40;
-  --color-dark-blue-tint: rgba(2,47,64,.75);
+  --tint-dark-blue: rgba(2,47,64,.75);
 
   /* Meaningful Colors */
-  --color-primary: #028090;
+  --color-primary: var(--color-blue);
   --color-dark: var(--color-dark-blue);
   --color-light: var(--color-light-blue);
   --color-success: var(--color-green);
@@ -25,10 +26,10 @@
   --color-danger: var(--color-red);
   --color-accent: var(--color-light-green);
   --color-background: var(--color-dark-gray);
-  --color-dark-tint: var(--color-dark-blue-tint);
 
   /* Spacing */
   --spacer: 1rem;
+  --spacer-small: 0.5em;
   --spacer-large: 3rem;
   --border-radius: 0.5em;
   --border-width: 0.1em;
@@ -58,7 +59,9 @@
 @media screen and (max-width: 350px) {
   :root {
     --font-size-1: 3.5rem;
+    --font-size-2: 1.7rem;
     --font-size-3: 0.8rem;
+    --font-size-p: 0.8rem;
   }
 }
 
@@ -101,21 +104,30 @@ li {
 h1 {
   font-size: var(--font-size-1, 2rem);
 }
+
 h2 {
   font-size: var(--font-size-2, 1.5rem);
 }
+
 h3 {
   color: var(--color-accent);
   font-size: var(--font-size-3, 1.17rem);
 }
+
 h4 {
   font-size: var(--font-size-4, 1rem);
 }
+
 h5 {
   font-size: var(--font-size-5, 0.83rem);
 }
+
 h6 {
   font-size: var(--font-size-6, 0.67rem);
+}
+
+p {
+  font-size: var(--font-size-p, 1rem);
 }
 
 a:hover,
