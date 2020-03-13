@@ -5,7 +5,7 @@
     <main class="content">
       <NavBar />
       <!-- for debug -->
-      <section style="height:100vh" />
+      <section style="height:200vh" />
     </main>
   </div>
 </template>
