@@ -132,6 +132,6 @@ export default {
   grid-row: 4;
   align-self: start;
   height: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 </style>
