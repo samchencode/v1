@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Hero :badges="badges" />
-    <SociaList />
+    <SociaList :scrollY="scrollY" />
     <main class="content">
       <NavBar />
       <!-- for debug -->
@@ -21,7 +21,17 @@ export default {
   components: { Hero, SociaList, NavBar },
   data: () => ({
     badges: ['Full Stack Web Development', 'Machine Learning'],
+    scrollY: null,
   }),
+  mounted() {
+    this.scrollY = window.scrollY;
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      this.scrollY = window.scrollY;
+    },
+  },
 };
 </script>
 
