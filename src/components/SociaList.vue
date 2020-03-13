@@ -27,21 +27,12 @@ export default {
   right: var(--spacer);
   top: var(--spacer);
   display: flex;
-  flex-direction: column;
-}
-
-.socialist::after {
-  content: '';
-  height: 50vh;
-  margin-top: var(--spacer);
-  width: 0;
-  border-left: 2px solid var(--color-white);
-  align-self: center;
+  flex-direction: row;
 }
 
 .socialist__link {
-  font-size: 2rem;
-  margin-bottom: .1rem;
+  font-size: 1.5rem;
+  margin: 0 .4em;
 }
 
 .socialist__icon {
@@ -54,17 +45,22 @@ export default {
   color: var(--color-accent);
 }
 
-@media (max-width: 800px) {
+@media screen and (min-width: 800px) {
   .socialist {
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .socialist::after {
-    display: none;
+    content: '';
+    height: 50vh;
+    margin-top: var(--spacer);
+    border-left: 2px solid var(--color-white);
+    align-self: center;
   }
 
   .socialist__link {
-    margin: 0 .4rem;
+    font-size: 3em;
+    margin-bottom: .1em;
   }
 }
 </style>

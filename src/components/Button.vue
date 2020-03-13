@@ -16,9 +16,11 @@ export default {
 .button {
   display: inline-block;
   background-color: none;
-  border: 1px solid var(--color-accent);
-  text-decoration: none;
+  border: var(--border-width) solid var(--color-accent);
   border-radius: var(--border-radius);
+  text-decoration: none;
+  font-size: 1em;
+  letter-spacing: 2px;
   transition:
     background-color var(--ease-primary) var(--duration-short),
     color var(--ease-primary) var(--duration-short);
@@ -28,5 +30,12 @@ export default {
 .button:focus {
   background-color: var(--color-accent);
   color: var(--color-black);
+}
+
+@media screen and (min-width: 800px) {
+  .button {
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+  }
 }
 </style>
