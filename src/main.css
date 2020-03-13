@@ -26,8 +26,8 @@
   --color-background: var(--color-dark-gray);
 
   /* Spacing */
-  --spacer: 1em;
-  --spacer-large: 3em;
+  --spacer: 1rem;
+  --spacer-large: 3rem;
   --border-radius: 0.5em;
   --border-width: 0.1em;
 
@@ -63,7 +63,7 @@
 @media screen and (min-width: 800px) {
   :root {
     --font-size-1: 8rem;
-    --font-size-2: 4rem;
+    --font-size-2: 3.5rem;
     --font-size-3: 2rem;
   }
 }

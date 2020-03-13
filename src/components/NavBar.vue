@@ -1,7 +1,7 @@
 <template>
   <nav class="sitenav">
     <h2 class="sitenav__logo">Sam Chen</h2>
-    <input type="checkbox" id="sitenav__toggle" class="sitenav__toggle"/>
+    <input type="checkbox" id="sitenav__toggle" class="sitenav__toggle" />
     <ul class="sitenav__list">
       <li class="sitenav__item">
         <a href="#" class="sitenav__link">Projects</a>
@@ -72,7 +72,7 @@ export default {
 
 .sitenav__hamburger::before {
   bottom: calc(var(--font-size-2) / 4 + 0.1em);
-  transform: scale(1,1);
+  transform: scale(1, 1);
   transition: opacity var(--ease-primary) var(--duration-short);
 }
 
@@ -86,12 +86,12 @@ export default {
 
 .sitenav__toggle:checked ~ .sitenav__toggle-label .sitenav__hamburger::before {
   opacity: 0;
-  transform: scale(0,1);
+  transform: scale(0, 1);
 }
 
-
 .sitenav__toggle:checked ~ .sitenav__toggle-label .sitenav__hamburger::after {
-  transform: translateY(calc(-1 * (var(--font-size-2) / 4 + 0.1em))) rotate(-90deg);
+  transform: translateY(calc(-1 * (var(--font-size-2) / 4 + 0.1em)))
+    rotate(-90deg);
 }
 
 .sitenav__list {
@@ -100,13 +100,13 @@ export default {
   display: flex;
   flex-direction: column;
   width: 100%;
-  transform: scale(1,0);
+  transform: scale(1, 0);
   transform-origin: top;
   transition: transform var(--ease-primary) var(--duration-short);
 }
 
 .sitenav__toggle:checked ~ .sitenav__list {
-  transform: scale(1,1);
+  transform: scale(1, 1);
 }
 
 .sitenav__logo {
@@ -114,7 +114,7 @@ export default {
 }
 
 .sitenav__link {
-  padding: 1em;
+  padding: 1em var(--spacer);
   display: grid;
   place-items: center;
   border-top: var(--border-width) solid var(--color-dark);
@@ -133,46 +133,46 @@ export default {
   .sitenav__item:last-child .sitenav__link {
     padding-bottom: calc(1em + 4vw);
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%);
-    overflow: hidden;
   }
 }
 
 @media screen and (min-width: 800px) {
-  /* .sitenav {
-    padding: 0 1em;
-  } */
-
   .sitenav {
     display: grid;
-    grid-template-columns: auto 1fr;
-    max-width: 1000px;
-    min-width: 800px;
-    height: 5em;
-    margin: 0 auto;
+    grid-template-columns: 1fr minmax(800px, 1000px) 1fr;
+    height: auto;
+  }
+
+  .sitenav__logo {
+    display: block;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: left;
+    padding: 0 var(--spacer);
   }
 
   .sitenav__list {
-    justify-self: end;
+    position: static;
+    width: auto;
+    transform: scale(1, 1);
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: right;
     display: grid;
     grid-template-columns: repeat(3, auto);
     column-gap: 1em;
     height: 100%;
   }
 
-  .sitenav__toggle-label,
+  .sitenav__toggle,
   .sitenav__toggle-label {
     display: none;
   }
 
-  .sitenav__logo,
   .sitenav__link {
     height: 100%;
     padding: 0 0.5em;
-    display: grid;
-    place-items: center;
-  }
-
-  .sitenav__link {
+    border: 0;
     text-decoration: none;
     background-color: inherit;
     transition: background-color var(--ease-primary) var(--duration-short);
@@ -184,21 +184,26 @@ export default {
     color: var(--color-black);
   }
 
-  /* @supports (clip-path: polygon(0 0)) {
-    .sitenav__list {
-      height: calc(5em + 3vw);
+  @supports (clip-path: polygon(0 0)) {
+    .sitenav {
+      box-sizing: content-box;
+      padding-bottom: 3vw;
       clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%);
-      overflow: hidden;
     }
 
     .sitenav__logo {
-      font-size: calc(var(--font-size-2) + 3vw / 2);
-      margin-top: calc(-1vw / 2);
+      font-size: calc(var(--font-size-2) + 1.5vw);
+      transform: translateY(1vw);
     }
 
     .sitenav__link {
-      margin-top: -1vw;
+      box-sizing: content-box;
+      padding-bottom: 3vw;
     }
-  } */
+
+    .sitenav__item:last-child .sitenav__link {
+      clip-path: none;
+    }
+  }
 }
 </style>
