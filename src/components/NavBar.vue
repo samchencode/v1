@@ -39,7 +39,7 @@ export default {
 .sitenav__toggle {
   visibility: hidden;
   position: absolute;
-  left: 9999px;
+  z-index: -1;
 }
 
 .sitenav__toggle-label {
@@ -138,21 +138,16 @@ export default {
 }
 
 @media screen and (min-width: 800px) {
-  .sitenav {
-    position: sticky;
-    top: 0;
-    height: 5em;
+  /* .sitenav {
     padding: 0 1em;
-    background-color: var(--color-primary);
-    box-shadow: var(--shadow);
-  }
+  } */
 
-  .sitenav__nav {
+  .sitenav {
     display: grid;
     grid-template-columns: auto 1fr;
     max-width: 1000px;
     min-width: 800px;
-    height: 100%;
+    height: 5em;
     margin: 0 auto;
   }
 
@@ -162,6 +157,11 @@ export default {
     grid-template-columns: repeat(3, auto);
     column-gap: 1em;
     height: 100%;
+  }
+
+  .sitenav__toggle-label,
+  .sitenav__toggle-label {
+    display: none;
   }
 
   .sitenav__logo,
