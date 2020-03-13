@@ -2,6 +2,10 @@
   <section id="spotlight" class="spotlight">
     <figure class="card spotlight__card">
       <div class="card__image" />
+      <div class="card__btn-group">
+        <LinkIcon href="#" iconClass="fas fa-link" />
+        <LinkIcon href="#" iconClass="fas fa-code" />
+      </div>
       <figcaption class="card__caption">
         <h3 class="card__subtitle">Project Spotlight</h3>
         <h2 class="card__title">My Awesome Project</h2>
@@ -17,6 +21,10 @@
     </figure>
     <figure class="card spotlight__card">
       <div class="card__image" />
+      <div class="card__btn-group">
+        <LinkIcon href="#" iconClass="fas fa-link" />
+        <LinkIcon href="#" iconClass="fas fa-code" />
+      </div>
       <figcaption class="card__caption">
         <h3 class="card__subtitle">Project Spotlight</h3>
         <h2 class="card__title">My Project</h2>
@@ -29,6 +37,10 @@
     </figure>
     <figure class="card spotlight__card">
       <div class="card__image" />
+      <div class="card__btn-group">
+        <LinkIcon href="#" iconClass="fas fa-link" />
+        <LinkIcon href="#" iconClass="fas fa-code" />
+      </div>
       <figcaption class="card__caption">
         <h3 class="card__subtitle">Project Spotlight</h3>
         <h2 class="card__title">My Project Overflows</h2>
@@ -71,11 +83,14 @@
 </template>
 
 <script>
+import LinkIcon from './LinkIcon.vue';
+
 export default {
   name: 'Spotlight',
   props: {
     projects: Array,
   },
+  components: { LinkIcon },
 };
 </script>
 
@@ -108,8 +123,16 @@ export default {
   background-color: var(--color-light-blue);
 }
 
+.card__btn-group {
+  grid-row: 1;
+  grid-column: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 .card__caption {
-  grid-row-start: 2;
+  grid-row: 2;
   display: grid;
   grid-template-columns: var(--spacer) auto var(--spacer);
   grid-template-rows: 2em auto var(--spacer-small) 1fr var(--spacer-small);
