@@ -38,6 +38,7 @@ export default {
 <style scoped>
 .socialist {
   position: fixed;
+  z-index: 100;
   right: var(--spacer);
   top: var(--spacer);
   display: flex;
@@ -79,11 +80,22 @@ export default {
   .socialist--no-tail::after {
     opacity: 0;
   }
+}
 
+@media screen and (min-width: 1200px) {
   .socialist--bottom {
     display: flex;
     top: auto;
     bottom: var(--spacer);
+    color: var(--tint-white);
+  }
+
+  .socialist--bottom::before {
+    border-color: var(--tint-white);
+  }
+
+  .socialist--bottom /deep/ .linkicon__icon {
+    color: var(--tint-white);
   }
 }
 </style>

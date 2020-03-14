@@ -21,6 +21,7 @@
   --color-dark-purple: #1e152a;
   --tint-dark-blue: rgba(2, 47, 64, 0.75);
   --tint-black: rgba(39, 39, 39, 0.75);
+  --tint-white: rgba(239, 241, 237, 0.75);
 
   /* Meaningful Colors */
   --color-primary: var(--color-blue);
