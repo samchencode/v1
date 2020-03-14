@@ -11,11 +11,16 @@
   --color-red: #f45b69;
   --color-green: #00a676;
   --color-yellow: #ffbc42;
+  --color-yellow-green: #d8d52b;
   --color-white: #eff1ed;
   --color-blue: #028090;
   --color-light-blue: #38aecc;
   --color-dark-blue: #022f40;
-  --tint-dark-blue: rgba(2,47,64,.75);
+  --color-light-pink: #f7b2b7;
+  --color-purple: #320e3b;
+  --color-dark-purple: #1e152a;
+  --tint-dark-blue: rgba(2, 47, 64, 0.75);
+  --tint-black: rgba(39, 39, 39, 0.75);
 
   /* Meaningful Colors */
   --color-primary: var(--color-blue);
@@ -39,7 +44,8 @@
 
   /* Transition */
   --duration-short: 150ms;
-  --ease-primary: ease-in-out;
+  --duration-medium: 350ms;
+  --ease-primary: ease-out;
 
   /* Font Sizes */
   --font-size-1: 4rem;

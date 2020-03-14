@@ -1,10 +1,19 @@
 <template>
   <section id="spotlight" class="spotlight">
     <figure class="card spotlight__card">
-      <div class="card__image" />
-      <div class="card__btn-group">
-        <LinkIcon href="#" iconClass="fas fa-link" />
-        <LinkIcon href="#" iconClass="fas fa-code" />
+      <div class="card__image">
+        <div class="card__btn-group">
+          <LinkIcon
+            className="card__linkicon"
+            href="#"
+            iconClass="fas fa-link"
+          />
+          <LinkIcon
+            className="card__linkicon"
+            href="#"
+            iconClass="fas fa-code"
+          />
+        </div>
       </div>
       <figcaption class="card__caption">
         <h3 class="card__subtitle">Project Spotlight</h3>
@@ -20,10 +29,19 @@
       </figcaption>
     </figure>
     <figure class="card spotlight__card">
-      <div class="card__image" />
-      <div class="card__btn-group">
-        <LinkIcon href="#" iconClass="fas fa-link" />
-        <LinkIcon href="#" iconClass="fas fa-code" />
+      <div class="card__image">
+        <div class="card__btn-group">
+          <LinkIcon
+            className="card__linkicon"
+            href="#"
+            iconClass="fas fa-link"
+          />
+          <LinkIcon
+            className="card__linkicon"
+            href="#"
+            iconClass="fas fa-code"
+          />
+        </div>
       </div>
       <figcaption class="card__caption">
         <h3 class="card__subtitle">Project Spotlight</h3>
@@ -36,10 +54,19 @@
       </figcaption>
     </figure>
     <figure class="card spotlight__card">
-      <div class="card__image" />
-      <div class="card__btn-group">
-        <LinkIcon href="#" iconClass="fas fa-link" />
-        <LinkIcon href="#" iconClass="fas fa-code" />
+      <div class="card__image">
+        <div class="card__btn-group">
+          <LinkIcon
+            className="card__linkicon"
+            href="#"
+            iconClass="fas fa-link"
+          />
+          <LinkIcon
+            className="card__linkicon"
+            href="#"
+            iconClass="fas fa-code"
+          />
+        </div>
       </div>
       <figcaption class="card__caption">
         <h3 class="card__subtitle">Project Spotlight</h3>
@@ -97,8 +124,9 @@ export default {
 <style>
 .card {
   display: grid;
-  grid-template-rows: 1fr 60%;
+  grid-template-rows: minmax(40%, 1fr) auto;
   height: 80vh;
+  --image-url: url('//unsplash.it/600');
 }
 
 .card__image,
@@ -111,8 +139,9 @@ export default {
   width: 100%;
   grid-row: 1 / 3;
   background-blend-mode: multiply;
-  background: url('//unsplash.it/600') no-repeat fixed center;
-  background-size: cover;
+  background: var(--image-url) no-repeat fixed center/cover;
+  display: grid;
+  grid-template-rows: subgrid;
 }
 
 .card:nth-child(odd) .card__image {
@@ -120,7 +149,7 @@ export default {
 }
 
 .card:nth-child(even) .card__image {
-  background-color: var(--color-light-blue);
+  background-color: var(--color-red);
 }
 
 .card__btn-group {
@@ -134,11 +163,12 @@ export default {
 .card__caption {
   grid-row: 2;
   display: grid;
-  grid-template-columns: var(--spacer) auto var(--spacer);
+  max-height: calc(80vh * 0.6);
+  grid-template-columns: var(--spacer) 1fr var(--spacer);
   grid-template-rows: 2em auto var(--spacer-small) 1fr var(--spacer-small);
   align-content: start;
   align-items: center;
-  background-color: var(--tint-dark-blue);
+  background-color: var(--tint-black);
 }
 
 .card__title,
@@ -156,5 +186,125 @@ export default {
   align-self: start;
   height: 100%;
   overflow-y: auto;
+}
+
+@media screen and (min-width: 800px) {
+  .card {
+    grid-template-columns: 1fr repeat(8, minmax(100px, 125px)) 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    padding: 0 var(--spacer);
+  }
+
+  .card:nth-child(odd) {
+    background-color: var(--color-purple);
+  }
+
+  .card:nth-child(odd) .card__image {
+    grid-column: 2 / 8;
+  }
+
+  .card:nth-child(odd) .card__caption {
+    grid-column: 6 / 10;
+  }
+
+  .card:nth-child(even) {
+    background-color: var(--color-dark-blue);
+  }
+
+  .card:nth-child(even) .card__image {
+    grid-column: 4 / 10;
+  }
+
+  .card:nth-child(even) .card__caption {
+    grid-column: 2 / 6;
+  }
+
+  .card__image {
+    background-attachment: scroll;
+    grid-row: 1 / 9;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+  }
+
+  .card__image::before {
+    content: '';
+    position: absolute;
+    background-color: var(--tint-black);
+    height: 120%;
+    width: 45%;
+    bottom: 0;
+    transform: rotate(0deg);
+    transition: transform var(--duration-medium) var(--ease-primary);
+  }
+
+  .card:nth-child(odd) .card__image::before {
+    right: 100%;
+    transform-origin: bottom right;
+  }
+
+  .card:nth-child(even) .card__image::before {
+    left: 100%;
+    transform-origin: bottom left;
+  }
+
+  .card:nth-child(odd) .card__image:hover::before {
+    transform: rotate(14deg);
+  }
+
+  .card:nth-child(even) .card__image:hover::before {
+    transform: scale(1, 1) rotate(-14deg);
+  }
+
+  .card__image:hover .card__btn-group {
+    display: flex;
+  }
+
+  .card__image:hover .card__btn-group .card__linkicon {
+    opacity: 1;
+  }
+
+  .card__image:hover .card__btn-group .card__linkicon:nth-child(1) {
+    transition-delay: 100ms;
+  }
+
+  .card__image:hover .card__btn-group .card__linkicon:nth-child(2) {
+    transition-delay: 150ms;
+  }
+
+  .card__caption {
+    z-index: 2;
+    height: min-content;
+    grid-row: 4;
+  }
+
+  .card__btn-group {
+    grid-row: 2 / 5;
+    flex-direction: column;
+    z-index: 2;
+  }
+
+  .card:nth-child(odd) .card__btn-group {
+    grid-column: 1;
+  }
+
+  .card:nth-child(even) .card__btn-group {
+    grid-column: 6;
+  }
+
+  .card__linkicon {
+    opacity: 0;
+    transition: opacity var(--duration-short) var(--ease-primary);
+  }
+
+  .card__linkicon:nth-child(1) {
+    transition-delay: 50ms;
+  }
+
+  .card__linkicon:nth-child(2) {
+    transition-delay: 0ms;
+  }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <a :href="href" class="linkicon">
+  <a :href="href" :class="['linkicon', className]">
     <i :class="['linkicon__icon', iconClass]"></i>
   </a>
 </template>
@@ -10,6 +10,7 @@ export default {
   props: {
     href: String,
     iconClass: String,
+    className: String,
   },
 };
 </script>
