@@ -1,26 +1,21 @@
 <template>
   <div :class="['socialist', modifierClassNames]">
-    <a href="#" class="socialist__link">
-      <i class="socialist__icon fas fa-envelope"></i>
-    </a>
-    <a href="#" class="socialist__link">
-      <i class="socialist__icon fab fa-github"></i>
-    </a>
-    <a href="#" class="socialist__link">
-      <i class="socialist__icon fab fa-codepen"></i>
-    </a>
-    <a href="#" class="socialist__link">
-      <i class="socialist__icon fab fa-linkedin"></i>
-    </a>
+    <LinkIcon href="#" iconClass="fas fa-envelope" />
+    <LinkIcon href="#" iconClass="fab fa-github" />
+    <LinkIcon href="#" iconClass="fab fa-codepen" />
+    <LinkIcon href="#" iconClass="fab fa-linkedin" />
   </div>
 </template>
 
 <script>
+import LinkIcon from './LinkIcon.vue';
+
 export default {
   name: 'SociaList',
   props: {
     scrollY: Number,
   },
+  components: { LinkIcon },
   computed: {
     modifierClassNames() {
       const height = window.innerHeight;
@@ -43,6 +38,7 @@ export default {
 <style scoped>
 .socialist {
   position: fixed;
+  z-index: 100;
   right: var(--spacer);
   top: var(--spacer);
   display: flex;
@@ -57,21 +53,6 @@ export default {
 
 .socialist--bottom {
   display: none;
-}
-
-.socialist__link {
-  font-size: 1.5rem;
-  margin: 0 0.4em;
-}
-
-.socialist__icon {
-  color: var(--color-white);
-  transition: color var(--ease-primary) var(--duration-short);
-}
-
-.socialist__icon:hover,
-.socialist__icon:hover {
-  color: var(--color-accent);
 }
 
 @media screen and (min-width: 800px) {
@@ -99,16 +80,22 @@ export default {
   .socialist--no-tail::after {
     opacity: 0;
   }
+}
 
+@media screen and (min-width: 1200px) {
   .socialist--bottom {
     display: flex;
     top: auto;
     bottom: var(--spacer);
+    color: var(--tint-white);
   }
 
-  .socialist__link {
-    font-size: 3em;
-    margin-bottom: 0.1em;
+  .socialist--bottom::before {
+    border-color: var(--tint-white);
+  }
+
+  .socialist--bottom /deep/ .linkicon__icon {
+    color: var(--tint-white);
   }
 }
 </style>

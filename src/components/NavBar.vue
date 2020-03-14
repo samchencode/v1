@@ -29,6 +29,7 @@ export default {
 .sitenav {
   position: sticky;
   top: 0;
+  z-index: 100;
   height: 5em;
   display: flex;
   align-items: center;
@@ -189,6 +190,7 @@ export default {
       box-sizing: content-box;
       padding-bottom: 3vw;
       clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%);
+      margin-bottom: -3vw;
     }
 
     .sitenav__logo {

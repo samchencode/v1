@@ -36,7 +36,6 @@ export default {
 }
 
 .hero__subtitle {
-  color: var(--color-accent);
   margin-left: 0.3em;
 }
 
