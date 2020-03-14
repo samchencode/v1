@@ -277,11 +277,16 @@ export default {
   .card__caption {
     z-index: 2;
     height: min-content;
-    grid-row: 4;
+    grid-row: 4 / 8;
+    grid-template-rows: 2em auto var(--spacer) 1fr var(--spacer);
+  }
+
+  .card__subtitle {
+    font-size: 1.2em;
   }
 
   .card__btn-group {
-    grid-row: 2 / 5;
+    grid-row: 1 / 4;
     flex-direction: column;
     z-index: 2;
   }
