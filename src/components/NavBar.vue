@@ -1,5 +1,5 @@
 <template>
-  <nav class="sitenav">
+  <nav :class="['sitenav', modifierClassNames]">
     <h2 class="sitenav__logo">Sam Chen</h2>
     <input type="checkbox" id="sitenav__toggle" class="sitenav__toggle" />
     <ul class="sitenav__list">
@@ -22,6 +22,16 @@
 <script>
 export default {
   name: 'NavBar',
+  props: { windowHeight: Number, scrollY: Number },
+  computed: {
+    modifierClassNames() {
+      const classes = [];
+      if (this.scrollY > this.windowHeight) {
+        classes.push('sitenav--liftoff');
+      }
+      return classes;
+    },
+  },
 };
 </script>
 
@@ -33,8 +43,11 @@ export default {
   height: 5em;
   display: flex;
   align-items: center;
-  box-shadow: var(--shadow);
   background-color: var(--color-primary);
+}
+
+.sitenav--liftoff {
+  box-shadow: var(--shadow);
 }
 
 .sitenav__toggle {

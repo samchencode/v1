@@ -14,11 +14,12 @@ export default {
   name: 'SociaList',
   props: {
     scrollY: Number,
+    windowHeight: Number,
   },
   components: { LinkIcon },
   computed: {
     modifierClassNames() {
-      const height = window.innerHeight;
+      const height = this.windowHeight;
       const classes = [];
       if (this.scrollY !== 0 && this.scrollY < height * 0.9) {
         classes.push('socialist--no-tail');
