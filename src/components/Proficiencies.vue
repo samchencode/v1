@@ -1,7 +1,7 @@
 <template>
   <section class="proficiencies">
     <h3 class="proficiencies__subtitle">Proficiencies</h3>
-    <h2 class="proficiencies__title">Things I Use</h2>
+    <h2 class="proficiencies__title">Stuff I Use</h2>
     <PackDisplay class="proficiencies__pack" />
   </section>
 </template>
@@ -21,7 +21,7 @@ export default {
   overflow: hidden;
   display: grid;
   grid-template-columns: var(--spacer) 1fr var(--spacer);
-  grid-template-rows: 1fr minmax(50%,100vw) repeat(2, auto) 1fr;
+  grid-template-rows: 1fr minmax(50%, 100vw) repeat(2, auto) 1fr;
   background-color: var(--color-deep-blue);
 }
 
@@ -32,7 +32,7 @@ export default {
 
 .proficiencies__title,
 .proficiencies__subtitle {
-  grid-column: 2;
+  grid-column: 2 / span all;
 }
 
 .proficiencies__title {
@@ -42,5 +42,32 @@ export default {
 
 .proficiencies__subtitle {
   grid-row: -4;
+}
+
+@media screen and (min-width: 800px) {
+  .proficiencies {
+    grid-template-columns: 1fr repeat(8, minmax(100px, 125px)) 1fr;
+    column-gap: var(--spacer);
+    grid-template-rows: repeat(12, 1fr);
+  }
+
+  .proficiencies::before {
+    content: '';
+    border-left: 1px solid var(--color-white);
+    border-right: 1px solid var(--color-white);
+    grid-column: 2 / 10;
+    grid-row: 2 / -2;
+  }
+
+  .proficiencies__pack {
+    grid-row: 1 / span all;
+    grid-column: 4 / -2;
+    font-size: 1.5em;
+  }
+
+  .proficiencies__title,
+  .proficiencies__subtitle {
+    margin-left: var(--spacer);
+  }
 }
 </style>
