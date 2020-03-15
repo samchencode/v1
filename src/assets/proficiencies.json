@@ -1,0 +1,181 @@
+[
+  { "type": "", "name": "__root", "category": "__root", "url": "" },
+  { "type": "__root", "name": "language", "category": "__type", "url": "" },
+  { "type": "__root", "name": "library-framework", "category": "__type", "url": "" },
+  { "type": "__root", "name": "dev-tool", "category": "__type", "url": "" },
+  { "type": "__root", "name": "design-tool", "category": "__type", "url": "" },
+  {
+    "type": "language",
+    "name": "english",
+    "category": "human-fluent",
+    " url": ""
+  },
+  {
+    "type": "language",
+    "name": "chinese",
+    "category": "human-fluent",
+    " url": ""
+  },
+  {
+    "type": "language",
+    "name": "japanese",
+    "category": "human-intermediate",
+    " url": ""
+  },
+  { "type": "language", "name": "JS", "category": "frontend", " url": "" },
+  {
+    "type": "language",
+    "name": "NodeJS",
+    "category": "backend",
+    " url": ""
+  },
+  { "type": "language", "name": "PHP", "category": "backend", " url": "" },
+  {
+    "type": "language",
+    "name": "HTML5",
+    "category": "frontend",
+    " url": ""
+  },
+  { "type": "language", "name": "CSS", "category": "frontend", " url": "" },
+  { "type": "language", "name": "Java", "category": "backend", " url": "" },
+  {
+    "type": "language",
+    "name": "python",
+    "category": "data science",
+    " url": ""
+  },
+  { "type": "language", "name": "R", "category": "data science", " url": "" },
+  {
+    "type": "language",
+    "name": "Octave",
+    "category": "data science",
+    " url": ""
+  },
+  { "type": "language", "name": "Bash", "category": "command", " url": "" },
+  {
+    "type": "library-framework",
+    "name": "React Native",
+    "category": "mobile",
+    " url": ""
+  },
+  {
+    "type": "library-framework",
+    "name": "Expo",
+    "category": "mobile",
+    " url": ""
+  },
+  {
+    "type": "library-framework",
+    "name": "Vue.js",
+    "category": "frontend",
+    " url": ""
+  },
+  {
+    "type": "library-framework",
+    "name": "D3.js",
+    "category": "frontend",
+    " url": ""
+  },
+  {
+    "type": "library-framework",
+    "name": "React",
+    "category": "frontend",
+    " url": ""
+  },
+  {
+    "type": "library-framework",
+    "name": "Phaser",
+    "category": "graphics",
+    " url": ""
+  },
+  {
+    "type": "library-framework",
+    "name": "three.js",
+    "category": "graphics",
+    " url": ""
+  },
+  {
+    "type": "library-framework",
+    "name": "Laravel",
+    "category": "backend",
+    " url": ""
+  },
+  {
+    "type": "library-framework",
+    "name": "Slim",
+    "category": "backend",
+    " url": ""
+  },
+  {
+    "type": "library-framework",
+    "name": "Sails.js",
+    "category": "backend",
+    " url": ""
+  },
+  {
+    "type": "library-framework",
+    "name": "Express",
+    "category": "backend",
+    " url": ""
+  },
+  {
+    "type": "library-framework",
+    "name": "numpy",
+    "category": "data science",
+    " url": ""
+  },
+  {
+    "type": "library-framework",
+    "name": "pandas",
+    "category": "data science",
+    " url": ""
+  },
+  {
+    "type": "library-framework",
+    "name": "tidyverse",
+    "category": "data science",
+    " url": ""
+  },
+  {
+    "type": "library-framework",
+    "name": "magrittr",
+    "category": "data science",
+    " url": ""
+  },
+  {
+    "type": "library-framework",
+    "name": "socket.io",
+    "category": "other",
+    " url": ""
+  },
+  {
+    "type": "library-framework",
+    "name": "twilio",
+    "category": "other",
+    " url": ""
+  },
+  { "type": "dev-tool", "name": "webpack", "category": "packaging", " url": "" },
+  { "type": "dev-tool", "name": "git", "category": "vcs", " url": "" },
+  { "type": "dev-tool", "name": "Heroku", "category": "devops", " url": "" },
+  { "type": "dev-tool", "name": "BlueHost", "category": "devops", " url": "" },
+  {
+    "type": "design-tool",
+    "name": "Adobe Photoshop",
+    "category": "image",
+    " url": ""
+  },
+  { "type": "design-tool", "name": "Sony Vegas", "category": "video", " url": "" },
+  {
+    "type": "design-tool",
+    "name": "Adobe Premiere",
+    "category": "video",
+    " url": ""
+  },
+  {
+    "type": "design-tool",
+    "name": "Adobe Audition",
+    "category": "audio",
+    " url": ""
+  },
+  { "type": "design-tool", "name": "Audacity", "category": "audio", " url": "" }
+]
