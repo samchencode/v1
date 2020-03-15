@@ -9,7 +9,7 @@
   },
   {
     "type": "__root",
-    "name": "library-framework",
+    "name": "library/framework",
     "category": "__type",
     "url": "",
     "id": "3"
@@ -120,119 +120,119 @@
     "id": "18"
   },
   {
-    "type": "library-framework",
+    "type": "library/framework",
     "name": "React Native",
     "category": "mobile",
     "url": "",
     "id": "19"
   },
   {
-    "type": "library-framework",
+    "type": "library/framework",
     "name": "Expo",
     "category": "mobile",
     "url": "",
     "id": "20"
   },
   {
-    "type": "library-framework",
+    "type": "library/framework",
     "name": "Vue.js",
     "category": "frontend",
     "url": "",
     "id": "21"
   },
   {
-    "type": "library-framework",
+    "type": "library/framework",
     "name": "D3.js",
     "category": "frontend",
     "url": "",
     "id": "22"
   },
   {
-    "type": "library-framework",
+    "type": "library/framework",
     "name": "React",
     "category": "frontend",
     "url": "",
     "id": "23"
   },
   {
-    "type": "library-framework",
+    "type": "library/framework",
     "name": "Phaser",
     "category": "graphics",
     "url": "",
     "id": "24"
   },
   {
-    "type": "library-framework",
+    "type": "library/framework",
     "name": "three.js",
     "category": "graphics",
     "url": "",
     "id": "25"
   },
   {
-    "type": "library-framework",
+    "type": "library/framework",
     "name": "Laravel",
     "category": "backend",
     "url": "",
     "id": "26"
   },
   {
-    "type": "library-framework",
+    "type": "library/framework",
     "name": "Slim",
     "category": "backend",
     "url": "",
     "id": "27"
   },
   {
-    "type": "library-framework",
+    "type": "library/framework",
     "name": "Sails.js",
     "category": "backend",
     "url": "",
     "id": "28"
   },
   {
-    "type": "library-framework",
+    "type": "library/framework",
     "name": "Express",
     "category": "backend",
     "url": "",
     "id": "29"
   },
   {
-    "type": "library-framework",
+    "type": "library/framework",
     "name": "numpy",
     "category": "data science",
     "url": "",
     "id": "30"
   },
   {
-    "type": "library-framework",
+    "type": "library/framework",
     "name": "pandas",
     "category": "data science",
     "url": "",
     "id": "31"
   },
   {
-    "type": "library-framework",
+    "type": "library/framework",
     "name": "tidyverse",
     "category": "data science",
     "url": "",
     "id": "32"
   },
   {
-    "type": "library-framework",
+    "type": "library/framework",
     "name": "magrittr",
     "category": "data science",
     "url": "",
     "id": "33"
   },
   {
-    "type": "library-framework",
+    "type": "library/framework",
     "name": "socket.io",
     "category": "other",
     "url": "",
     "id": "34"
   },
   {
-    "type": "library-framework",
+    "type": "library/framework",
     "name": "twilio",
     "category": "other",
     "url": "",

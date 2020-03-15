@@ -1,10 +1,10 @@
 import * as d3 from '@/lib/d3';
 
-const types = ['library-framework', 'language', 'design-tool', 'dev-tool'];
+const types = ['library/framework', 'language', 'design-tool', 'dev-tool'];
 const typeRange = ['#ff6f59', '#9d44b5', '#38aecc', '#f7b2b7'];
 const categoryRanges = [
   ['#ffe2de', '#ff8978'],
-  ['#dfd9e2', '#9b55ad'],
+  ['#f0d7fc', '#bc69d1'],
   ['#bde6f0', '#4ebdd9'],
   ['#fcf0f1', '#facacc'],
 ];
