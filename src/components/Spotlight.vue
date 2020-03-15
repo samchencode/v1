@@ -101,7 +101,7 @@ export default {
 .card {
   display: grid;
   grid-template-rows: minmax(40%, 1fr) auto;
-  height: 80vh;
+  height: calc(90vh - 5em);
   --image-url: url('//unsplash.it/600');
 }
 
@@ -296,6 +296,7 @@ export default {
   .card__linkicon {
     opacity: 0;
     transition: opacity var(--duration-short) var(--ease-primary);
+    font-size: 4em;
   }
 
   .card__linkicon:nth-child(1) {
