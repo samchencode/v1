@@ -211,6 +211,8 @@ export default {
   }
 
   .card__image {
+    display: grid;
+    padding: 0;
     background-attachment: scroll;
     grid-row: 1 / 9;
     position: relative;
@@ -280,6 +282,7 @@ export default {
     grid-row: 1 / 4;
     flex-direction: column;
     z-index: 2;
+    height: 100%;
   }
 
   .card:nth-child(odd) .card__btn-group {
