@@ -218,6 +218,7 @@ export default {
 
     .sitenav__item:last-child .sitenav__link {
       clip-path: none;
+      padding-bottom: 3vw;
     }
   }
 }
