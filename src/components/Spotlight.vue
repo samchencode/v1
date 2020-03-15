@@ -4,12 +4,12 @@
       <div class="card__image">
         <div class="card__btn-group">
           <LinkIcon
-            className="card__linkicon"
+            class="card__linkicon"
             href="#"
             iconClass="fas fa-link"
           />
           <LinkIcon
-            className="card__linkicon"
+            class="card__linkicon"
             href="#"
             iconClass="fas fa-code"
           />
@@ -32,12 +32,12 @@
       <div class="card__image">
         <div class="card__btn-group">
           <LinkIcon
-            className="card__linkicon"
+            class="card__linkicon"
             href="#"
             iconClass="fas fa-link"
           />
           <LinkIcon
-            className="card__linkicon"
+            class="card__linkicon"
             href="#"
             iconClass="fas fa-code"
           />
@@ -57,12 +57,12 @@
       <div class="card__image">
         <div class="card__btn-group">
           <LinkIcon
-            className="card__linkicon"
+            class="card__linkicon"
             href="#"
             iconClass="fas fa-link"
           />
           <LinkIcon
-            className="card__linkicon"
+            class="card__linkicon"
             href="#"
             iconClass="fas fa-code"
           />
