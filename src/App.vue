@@ -5,14 +5,8 @@
     <main class="content">
       <NavBar :scrollY="scrollY" :windowHeight="windowHeight" />
       <Spotlight class="content__section" />
+      <Proficiencies class="content__section" />
       <!-- for debug -->
-      <Proficiencies
-        class="content__section"
-        :windowWidth="windowWidth"
-        :windowHeight="windowHeight"
-      />
-      <section class="content__section" />
-      <section class="content__section" />
       <section class="content__section" />
     </main>
   </div>
