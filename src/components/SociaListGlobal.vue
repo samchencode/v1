@@ -6,7 +6,7 @@
 import SociaList from './SociaList.vue';
 
 export default {
-  name: 'SociaList Global',
+  name: 'SociaListGlobal',
   props: {
     scrollY: Number,
     windowHeight: Number,
