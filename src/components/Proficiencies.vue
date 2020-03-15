@@ -17,17 +17,17 @@ export default {
 
 <style>
 .proficiencies {
+  height: calc(100vh - 5rem);
   overflow: hidden;
   display: grid;
   grid-template-columns: var(--spacer) 1fr var(--spacer);
-  grid-template-rows: var(--spacer) repeat(2, auto) minmax(60%, 100%) var(
-      --spacer
-    );
+  grid-template-rows: 1fr minmax(50%,100vw) repeat(2, auto) 1fr;
+  background-color: var(--color-deep-blue);
 }
 
 .proficiencies__pack {
-  grid-column: 2;
-  grid-row: 4;
+  grid-column: 1 / 4;
+  grid-row: 2;
 }
 
 .proficiencies__title,
@@ -36,11 +36,11 @@ export default {
 }
 
 .proficiencies__title {
-  grid-row: 3;
-  font-size: 3em;
+  grid-row: -3;
+  margin-bottom: 0.25em;
 }
 
 .proficiencies__subtitle {
-  grid-row: 2;
+  grid-row: -4;
 }
 </style>

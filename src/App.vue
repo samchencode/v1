@@ -7,7 +7,7 @@
       <Spotlight class="content__section" />
       <Proficiencies class="content__section" />
       <!-- for debug -->
-      <section class="content__section" />
+      <section class="content__section--debug" />
     </main>
   </div>
 </template>
@@ -58,13 +58,7 @@ export default {
 .app {
   position: relative;
 }
-
-.content__section:not(:nth-child(2)) {
-  height: 80vh; /* probably need to remove this later */
-  display: grid;
-}
-
-.content__section:nth-child(odd) {
-  background-color: var(--color-gray);
+.content__section--debug {
+  height: 80vh;
 }
 </style>
