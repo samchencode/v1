@@ -60,12 +60,6 @@ export default {
   .contact__socialist {
     grid-column: 2;
   }
-
-  @supports (clip-path: polygon(0 0)) {
-    .contact {
-      height: calc(90vh - 5em + 3vw);
-    }
-  }
 }
 
 </style>
