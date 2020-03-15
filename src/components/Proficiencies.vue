@@ -1,7 +1,9 @@
 <template>
   <section class="proficiencies">
-    <h3 class="proficiencies__subtitle">Proficiencies</h3>
-    <h2 class="proficiencies__title">Stuff I Use</h2>
+    <header class="proficiencies__header">
+      <h3 class="proficiencies__subtitle">Proficiencies</h3>
+      <h2 class="proficiencies__title">Stuff I Use</h2>
+    </header>
     <PackDisplay class="proficiencies__pack" />
   </section>
 </template>
@@ -21,7 +23,7 @@ export default {
   overflow: hidden;
   display: grid;
   grid-template-columns: var(--spacer) 1fr var(--spacer);
-  grid-template-rows: 1fr minmax(50%, 100vw) repeat(2, auto) 1fr;
+  grid-template-rows: 1fr minmax(50%, 100vw) auto 1fr;
   background-color: var(--color-deep-blue);
 }
 
@@ -30,18 +32,9 @@ export default {
   grid-row: 2;
 }
 
-.proficiencies__title,
-.proficiencies__subtitle {
+.proficiencies__header {
   grid-column: 2 / -2;
-}
-
-.proficiencies__title {
   grid-row: -3;
-  margin-bottom: 0.25em;
-}
-
-.proficiencies__subtitle {
-  grid-row: -4;
 }
 
 @media screen and (min-width: 800px) {
@@ -54,19 +47,24 @@ export default {
     content: '';
     border-left: 1px solid var(--color-white);
     border-right: 1px solid var(--color-white);
-    grid-column: 2 / 10;
+    grid-column: 3 / -2;
     grid-row: 2 / -2;
   }
 
   .proficiencies__pack {
     grid-row: 1 / span all;
-    grid-column: 4 / -2;
+    grid-column: 3 / -2;
     font-size: 1.5em;
   }
 
-  .proficiencies__title,
+  .proficiencies__header {
+    grid-column: 3 / -2;
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+  }
+
   .proficiencies__subtitle {
-    margin-left: var(--spacer);
+    align-self: end;
   }
 }
 </style>
