@@ -46,4 +46,26 @@ export default {
   grid-row: 5;
   align-self: start;
 }
+
+@media screen and (min-width: 800px) {
+
+  .contact {
+    padding: 0;
+    grid-template-columns: 1fr minmax(800px, 1000px) 1fr;
+  }
+
+  .contact__subtitle,
+  .contact__title,
+  .contact__button,
+  .contact__socialist {
+    grid-column: 2;
+  }
+
+  @supports (clip-path: polygon(0 0)) {
+    .contact {
+      height: calc(90vh - 5em + 3vw);
+    }
+  }
+}
+
 </style>
