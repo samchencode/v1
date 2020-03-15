@@ -7,7 +7,7 @@
       <Spotlight class="content__section" />
       <Proficiencies class="content__section" />
       <Contact class="content__section" />
-      <footer class="content__footer" />
+      <Footer class="content__footer" />
     </main>
   </div>
 </template>
@@ -19,6 +19,7 @@ import NavBar from '@/components/NavBar.vue';
 import Spotlight from '@/components/Spotlight.vue';
 import Proficiencies from '@/components/Proficiencies.vue';
 import Contact from '@/components/Contact.vue';
+import Footer from '@/components/Footer.vue';
 import '@/main.css';
 
 export default {
@@ -30,6 +31,7 @@ export default {
     Spotlight,
     Proficiencies,
     Contact,
+    Footer,
   },
   data: () => ({
     badges: ['Full Stack Web Development', 'Machine Learning'],
@@ -62,7 +64,6 @@ export default {
 }
 
 .content__footer {
-  display: flex;
   height: 10vh;
 }
 </style>
