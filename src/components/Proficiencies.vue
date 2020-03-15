@@ -1,61 +1,63 @@
 <template>
-  <section class="proficiencies" ref="container">
-    <!-- <h3 class="proficiencies__subtitle">Proficiencies</h3> -->
-    <!-- <h1>Stuff I've Used</h1> -->
-    <svg
-      class="proficiencies__svg"
-      :transform="`rotate(45) translate(${svgContainerWidth * -0.07},0)`"
-      overflow="visible"
-    >
-      <g text-anchor="middle">
-        <g v-for="[height, nodes] of layers" :key="'layer-' + height">
-          <g
-            v-for="n of nodes"
-            :key="'node-' + n.data.id"
-            :transform="`translate(${n.x},${n.y})`"
-          >
-            <circle
-              @mouseenter="handleMouseEnterCircle(n)"
-              @mouseleave="handleMouseLeaveCircle(n)"
-              :r="n.r"
-              :fill="scaleColor(height, n)"
-              :stroke="focusCircle === n.data.id && 'white'"
-            />
-            <text
-              transform="rotate(-45)"
-              v-if="n.height === 0"
-              font-size=".48em"
-              y=".5em"
+  <section class="proficiencies">
+    <h3 class="proficiencies__subtitle">Proficiencies</h3>
+    <h2 class="proficiencies__title">Things I Use</h2>
+    <div ref="container" class="proficiencies__svg-container">
+      <svg class="proficiencies__svg" overflow="visible">
+        <g text-anchor="middle">
+          <g v-for="[height, nodes] of layers" :key="'layer-' + height">
+            <g
+              v-for="n of nodes"
+              :key="'node-' + n.data.id"
+              :transform="`translate(${n.x},${n.y})`"
             >
-              <tspan
-                v-for="(word, i) of n.data.name.split(/[ \.]/)"
-                :key="i"
-                x="0"
-                :y="i + 'em'"
-                :dy="
-                  i * 0.2 - 0.2 * (n.data.name.split(/[ \.]/).length - 1) + 'em'
-                "
+              <circle
+                @mouseenter="handleMouseEnterCircle(n)"
+                @mouseleave="handleMouseLeaveCircle(n)"
+                :r="n.r"
+                :fill="scaleColor(height, n)"
+                :stroke="focusCircle === n.data.id && 'white'"
+              />
+              <text
+                transform="rotate(-45)"
+                v-if="n.height === 0"
+                font-size=".48em"
+                y=".5em"
               >
-                {{ word }}
-              </tspan>
-            </text>
+                <tspan
+                  v-for="(word, i) of n.data.name.split(/[ \.]/)"
+                  :key="i"
+                  x="0"
+                  :y="i + 'em'"
+                  :dy="
+                    i * 0.2 -
+                      0.2 * (n.data.name.split(/[ \.]/).length - 1) +
+                      'em'
+                  "
+                >
+                  {{ word }}
+                </tspan>
+              </text>
+            </g>
           </g>
+          <path
+            v-for="n of layers.get(1)"
+            :key="'path-' + n.id"
+            :id="'path-' + n.id"
+            :d="generatePath(n)"
+            fill="none"
+            :transform="
+              `translate(${n.x},${n.y}) rotate(${getPathMeta(n).rot})`
+            "
+          />
+          <text v-for="n of layers.get(1)" :key="'text-' + n.data.id">
+            <textPath :href="'#path-' + n.id" startOffset="50%" fill="#eff1ed">
+              {{ n.data.name }}
+            </textPath>
+          </text>
         </g>
-        <path
-          v-for="n of layers.get(1)"
-          :key="'path-' + n.id"
-          :id="'path-' + n.id"
-          :d="generatePath(n)"
-          fill="none"
-          :transform="`translate(${n.x},${n.y}) rotate(${getPathMeta(n).rot})`"
-        />
-        <text v-for="n of layers.get(1)" :key="'text-' + n.data.id">
-          <textPath :href="'#path-' + n.id" startOffset="50%" fill="#eff1ed">
-            {{ n.data.name }}
-          </textPath>
-        </text>
-      </g>
-    </svg>
+      </svg>
+    </div>
   </section>
 </template>
 
@@ -150,9 +152,34 @@ export default {
 .proficiencies {
   overflow: hidden;
   display: grid;
+  grid-template-columns: var(--spacer) 1fr var(--spacer);
+  grid-template-rows: var(--spacer) repeat(2, auto) minmax(60%, 100%) var(--spacer) ;
+}
+
+.proficiencies__svg-container {
+  grid-column: 2;
+  grid-row: 4;
+  font-size: calc(4.5vw / 2vh);
 }
 
 .proficiencies__svg {
-  width: 100%;
+  height: 100%;
+  width: 114%;
+  margin: 0 -7%;
+  transform: rotate(45deg);
+}
+
+.proficiencies__title,
+.proficiencies__subtitle {
+  grid-column: 2;
+}
+
+.proficiencies__title {
+  grid-row: 3;
+  font-size: 3em;
+}
+
+.proficiencies__subtitle {
+  grid-row: 2;
 }
 </style>
