@@ -6,8 +6,7 @@
       <NavBar :scrollY="scrollY" :windowHeight="windowHeight" />
       <Spotlight class="content__section" />
       <Proficiencies class="content__section" />
-      <!-- for debug -->
-      <section class="content__section--debug" />
+      <Contact class="content__section" />
     </main>
   </div>
 </template>
@@ -18,6 +17,7 @@ import SociaList from '@/components/SociaList.vue';
 import NavBar from '@/components/NavBar.vue';
 import Spotlight from '@/components/Spotlight.vue';
 import Proficiencies from '@/components/Proficiencies.vue';
+import Contact from '@/components/Contact.vue';
 import '@/main.css';
 
 export default {
@@ -28,6 +28,7 @@ export default {
     NavBar,
     Spotlight,
     Proficiencies,
+    Contact,
   },
   data: () => ({
     badges: ['Full Stack Web Development', 'Machine Learning'],
@@ -57,8 +58,5 @@ export default {
 <style>
 .app {
   position: relative;
-}
-.content__section--debug {
-  height: 80vh;
 }
 </style>

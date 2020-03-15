@@ -47,7 +47,6 @@ export default {
   display: grid;
   place-items: center;
   margin-right: auto;
-  padding: .8em 2em;
   align-self: center;
 }
 
