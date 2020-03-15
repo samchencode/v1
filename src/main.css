@@ -145,3 +145,9 @@ a:hover,
 a:focus {
   color: var(--color-accent);
 }
+
+@media (min-width: 800px) {
+  h3 {
+    letter-spacing: 5px;
+  }
+}
