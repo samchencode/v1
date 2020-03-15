@@ -32,7 +32,7 @@ export default {
 
 .proficiencies__title,
 .proficiencies__subtitle {
-  grid-column: 2 / span all;
+  grid-column: 2 / -2;
 }
 
 .proficiencies__title {
@@ -47,7 +47,6 @@ export default {
 @media screen and (min-width: 800px) {
   .proficiencies {
     grid-template-columns: 1fr repeat(8, minmax(100px, 125px)) 1fr;
-    column-gap: var(--spacer);
     grid-template-rows: repeat(12, 1fr);
   }
 
