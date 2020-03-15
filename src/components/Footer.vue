@@ -4,8 +4,7 @@
     <p class="footer__copyright">
       Made with
       <i class="fas fa-heart"></i>
-      By
-      Sam Chen
+      By Sam Chen
     </p>
   </footer>
 </template>
@@ -50,7 +49,7 @@ export default {
 .footer__github,
 .footer__copyright {
   font-size: var(--font-size-6);
-  line-height: .9;
+  line-height: 1.3;
 }
 
 .footer__copyright {
@@ -66,5 +65,4 @@ export default {
     grid-template-columns: 1fr repeat(8, minmax(100px, 125px)) 1fr;
   }
 }
-
 </style>
