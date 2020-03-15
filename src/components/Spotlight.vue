@@ -3,16 +3,8 @@
     <figure class="card spotlight__card">
       <div class="card__image">
         <div class="card__btn-group">
-          <LinkIcon
-            class="card__linkicon"
-            href="#"
-            iconClass="fas fa-link"
-          />
-          <LinkIcon
-            class="card__linkicon"
-            href="#"
-            iconClass="fas fa-code"
-          />
+          <LinkIcon class="card__linkicon" href="#" iconClass="fas fa-link" />
+          <LinkIcon class="card__linkicon" href="#" iconClass="fas fa-code" />
         </div>
       </div>
       <figcaption class="card__caption">
@@ -31,16 +23,8 @@
     <figure class="card spotlight__card">
       <div class="card__image">
         <div class="card__btn-group">
-          <LinkIcon
-            class="card__linkicon"
-            href="#"
-            iconClass="fas fa-link"
-          />
-          <LinkIcon
-            class="card__linkicon"
-            href="#"
-            iconClass="fas fa-code"
-          />
+          <LinkIcon class="card__linkicon" href="#" iconClass="fas fa-link" />
+          <LinkIcon class="card__linkicon" href="#" iconClass="fas fa-code" />
         </div>
       </div>
       <figcaption class="card__caption">
@@ -56,16 +40,8 @@
     <figure class="card spotlight__card">
       <div class="card__image">
         <div class="card__btn-group">
-          <LinkIcon
-            class="card__linkicon"
-            href="#"
-            iconClass="fas fa-link"
-          />
-          <LinkIcon
-            class="card__linkicon"
-            href="#"
-            iconClass="fas fa-code"
-          />
+          <LinkIcon class="card__linkicon" href="#" iconClass="fas fa-link" />
+          <LinkIcon class="card__linkicon" href="#" iconClass="fas fa-code" />
         </div>
       </div>
       <figcaption class="card__caption">
@@ -140,8 +116,11 @@ export default {
   grid-row: 1 / 3;
   background-blend-mode: multiply;
   background: var(--image-url) no-repeat fixed center/cover;
-  display: grid;
-  grid-template-rows: subgrid;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 1em .5em;
+
 }
 
 .card:nth-child(odd) .card__image {
@@ -158,6 +137,10 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.card__linkicon {
+  font-size: 2.5em;
 }
 
 .card__caption {
@@ -186,6 +169,14 @@ export default {
   align-self: start;
   height: 100%;
   overflow-y: auto;
+}
+
+@supports (grid-template-rows: subgrid) {
+  .card__image {
+    grid-template-rows: subgrid;
+    display: grid;
+    align-items: center;
+  }
 }
 
 @media screen and (min-width: 800px) {
