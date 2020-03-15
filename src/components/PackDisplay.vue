@@ -145,9 +145,6 @@ export default {
 </script>
 
 <style>
-.pack {
-  font-size: calc(4.5vw / 2vh);
-}
 
 .pack__svg {
   height: 100%;
