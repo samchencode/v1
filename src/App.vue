@@ -1,19 +1,20 @@
 <template>
   <div id="app" class="app">
     <Hero :badges="badges" />
-    <SociaList :scrollY="scrollY" :windowHeight="windowHeight" />
+    <SociaListGlobal :scrollY="scrollY" :windowHeight="windowHeight" />
     <main class="content">
       <NavBar :scrollY="scrollY" :windowHeight="windowHeight" />
       <Spotlight class="content__section" />
       <Proficiencies class="content__section" />
       <Contact class="content__section" />
+      <footer class="content__footer" />
     </main>
   </div>
 </template>
 
 <script>
 import Hero from '@/components/Hero.vue';
-import SociaList from '@/components/SociaList.vue';
+import SociaListGlobal from '@/components/SociaListGlobal.vue';
 import NavBar from '@/components/NavBar.vue';
 import Spotlight from '@/components/Spotlight.vue';
 import Proficiencies from '@/components/Proficiencies.vue';
@@ -24,7 +25,7 @@ export default {
   name: 'App',
   components: {
     Hero,
-    SociaList,
+    SociaListGlobal,
     NavBar,
     Spotlight,
     Proficiencies,
@@ -58,5 +59,10 @@ export default {
 <style>
 .app {
   position: relative;
+}
+
+.content__footer {
+  display: flex;
+  height: 10vh;
 }
 </style>

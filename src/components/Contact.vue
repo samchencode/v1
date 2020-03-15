@@ -1,18 +1,21 @@
 <template>
   <section id="contact" class="contact">
     <h3 class="contact__subtitle">Contact</h3>
-    <h2 class="contact__title">Let's Talk Over Some Tea.</h2>
-    <Button class="contact__button" title="Send a message" href="#" />
+    <h2 class="contact__title">Let's Chat Over Some Tea.</h2>
+    <Button class="contact__button" title="Send an email" href="#" />
+    <SociaList class="contact__socialist" />
   </section>
 </template>
 
 <script>
 import Button from './Button.vue';
+import SociaList from './SociaList.vue';
 
 export default {
   name: 'Contact',
   components: {
     Button,
+    SociaList,
   },
 };
 </script>
@@ -20,8 +23,8 @@ export default {
 <style scoped>
 .contact {
   display: grid;
-  height: calc(100vh - 5em);
-  grid-template-rows: 1fr repeat(2, auto) 50%;
+  height: calc(90vh - 5em);
+  grid-template-rows: 1fr repeat(3, auto) 2fr;
   padding: var(--spacer);
   row-gap: var(--spacer);
 }
@@ -34,9 +37,13 @@ export default {
   grid-row: 3;
 }
 
-.button {
+.contact__button {
   grid-row: 4;
-  align-self: start;
   justify-self: left;
+}
+
+.contact__socialist {
+  grid-row: 5;
+  align-self: start;
 }
 </style>
