@@ -40,7 +40,7 @@ export default {
   position: sticky;
   top: 0;
   z-index: 100;
-  height: 5em;
+  height: 5rem;
   display: flex;
   align-items: center;
   background-color: var(--color-primary);
