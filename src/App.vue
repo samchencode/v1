@@ -1,33 +1,35 @@
 <template>
   <div id="app" class="app">
     <Hero :badges="badges" />
-    <SociaList :scrollY="scrollY" :windowHeight="windowHeight" />
+    <SociaListGlobal :scrollY="scrollY" :windowHeight="windowHeight" />
     <main class="content">
       <NavBar :scrollY="scrollY" :windowHeight="windowHeight" />
       <Spotlight class="content__section" />
       <Proficiencies class="content__section" />
-      <!-- for debug -->
-      <section class="content__section--debug" />
+      <Contact class="content__section" />
+      <footer class="content__footer" />
     </main>
   </div>
 </template>
 
 <script>
 import Hero from '@/components/Hero.vue';
-import SociaList from '@/components/SociaList.vue';
+import SociaListGlobal from '@/components/SociaListGlobal.vue';
 import NavBar from '@/components/NavBar.vue';
 import Spotlight from '@/components/Spotlight.vue';
 import Proficiencies from '@/components/Proficiencies.vue';
+import Contact from '@/components/Contact.vue';
 import '@/main.css';
 
 export default {
   name: 'App',
   components: {
     Hero,
-    SociaList,
+    SociaListGlobal,
     NavBar,
     Spotlight,
     Proficiencies,
+    Contact,
   },
   data: () => ({
     badges: ['Full Stack Web Development', 'Machine Learning'],
@@ -58,7 +60,9 @@ export default {
 .app {
   position: relative;
 }
-.content__section--debug {
-  height: 80vh;
+
+.content__footer {
+  display: flex;
+  height: 10vh;
 }
 </style>

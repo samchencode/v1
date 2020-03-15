@@ -24,6 +24,7 @@ export default {
   transition:
     background-color var(--ease-primary) var(--duration-short),
     color var(--ease-primary) var(--duration-short);
+  padding: .8em 2em;
 }
 
 .button:hover,

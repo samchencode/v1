@@ -101,7 +101,7 @@ export default {
 .card {
   display: grid;
   grid-template-rows: minmax(40%, 1fr) auto;
-  height: 80vh;
+  height: calc(90vh - 5em);
   --image-url: url('//unsplash.it/600');
 }
 
@@ -211,6 +211,8 @@ export default {
   }
 
   .card__image {
+    display: grid;
+    padding: 0;
     background-attachment: scroll;
     grid-row: 1 / 9;
     position: relative;
@@ -280,6 +282,7 @@ export default {
     grid-row: 1 / 4;
     flex-direction: column;
     z-index: 2;
+    height: 100%;
   }
 
   .card:nth-child(odd) .card__btn-group {
@@ -293,6 +296,7 @@ export default {
   .card__linkicon {
     opacity: 0;
     transition: opacity var(--duration-short) var(--ease-primary);
+    font-size: 4em;
   }
 
   .card__linkicon:nth-child(1) {
