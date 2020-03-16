@@ -1,5 +1,5 @@
 <template>
-  <section class="proficiencies">
+  <section id="proficiencies" class="proficiencies">
     <header class="proficiencies__header">
       <h3 class="proficiencies__subtitle">Proficiencies</h3>
       <h2 class="proficiencies__title">Stuff I Use</h2>
