@@ -119,8 +119,7 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 1em .5em;
-
+  padding: 1em 0.5em;
 }
 
 .card:nth-child(odd) .card__image {
@@ -148,7 +147,9 @@ export default {
   display: grid;
   max-height: calc(80vh * 0.6);
   grid-template-columns: var(--spacer) 1fr var(--spacer);
-  grid-template-rows: 2em auto var(--spacer-small) 1fr var(--spacer-small);
+  grid-template-rows: var(--font-size-3) auto var(--spacer-small) 1fr var(
+      --spacer-small
+    );
   align-content: start;
   align-items: center;
   background-color: var(--tint-black);
@@ -168,6 +169,10 @@ export default {
   grid-row: 4;
   align-self: start;
   height: 100%;
+  /* Calculated from grid template sizes so update this if those change */
+  max-height: calc(
+    48vh - 2 * var(--spacer-small) - var(--font-size-1) - var(--font-size-3)
+  );
   overflow-y: auto;
 }
 
