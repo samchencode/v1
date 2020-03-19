@@ -19,7 +19,7 @@ export default {
 
 <style>
 .proficiencies {
-  height: calc(100vh - 5rem);
+  height: calc(100vh - var(--nav-height));
   overflow: hidden;
   display: grid;
   grid-template-columns: var(--spacer) 1fr var(--spacer);

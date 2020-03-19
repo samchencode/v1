@@ -33,7 +33,7 @@ export default {
 .card {
   display: grid;
   grid-template-rows: minmax(40%, 1fr) auto;
-  height: calc(90vh - 5em);
+  height: calc(90vh - var(--nav-height));
 }
 
 .card__image,
