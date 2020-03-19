@@ -1,9 +1,9 @@
 <template>
   <section id="proficiencies" class="proficiencies">
-    <header class="proficiencies__header">
+    <hgroup class="proficiencies__header">
       <h3 class="proficiencies__subtitle">Proficiencies</h3>
       <h2 class="proficiencies__title">Stuff I Use</h2>
-    </header>
+    </hgroup>
     <PackDisplay class="proficiencies__pack" />
   </section>
 </template>
