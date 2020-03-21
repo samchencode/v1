@@ -66,6 +66,7 @@ export default {
 @media screen and (min-width: 860px) {
   .footer {
     grid-template-columns: 1fr repeat(8, minmax(100px, 125px)) 1fr;
+    grid-column-gap: var(--spacer);
   }
 }
 </style>
