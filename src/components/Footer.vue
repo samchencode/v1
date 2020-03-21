@@ -29,10 +29,13 @@ export default {
   align-items: start;
 }
 
-.footer::before,
+.footer::before {
+  grid-column: 2 / -4;
+}
+
 .footer__github,
 .footer__copyright {
-  grid-column: 2 / -4;
+  grid-column: 2 / -2;
 }
 
 .footer::before,
