@@ -1,16 +1,18 @@
 <template>
   <nav :class="['sitenav', modifierClassNames]">
-    <h2 class="sitenav__logo">Sam Chen</h2>
+    <h2 class="sitenav__logo">
+      <a href="#">Sam Chen</a>
+    </h2>
     <input type="checkbox" id="sitenav__toggle" class="sitenav__toggle" />
     <ul class="sitenav__list">
       <li class="sitenav__item">
-        <a href="#" class="sitenav__link">Projects</a>
+        <a href="#spotlight" class="sitenav__link">Projects</a>
       </li>
       <li class="sitenav__item">
-        <a href="#" class="sitenav__link">Proficiencies</a>
+        <a href="#proficiencies" class="sitenav__link">Proficiencies</a>
       </li>
       <li class="sitenav__item">
-        <a href="#" class="sitenav__link">Contact</a>
+        <a href="#contact" class="sitenav__link">Contact</a>
       </li>
     </ul>
     <label for="sitenav__toggle" class="sitenav__toggle-label">
@@ -40,7 +42,7 @@ export default {
   position: sticky;
   top: 0;
   z-index: 100;
-  height: 5rem;
+  height: var(--nav-height);
   display: flex;
   align-items: center;
   background-color: var(--color-primary);
@@ -62,7 +64,7 @@ export default {
   height: var(--font-size-2);
   width: var(--font-size-2);
   margin-left: var(--spacer);
-  cursor: pointer;
+  cursor: default;
 }
 
 .sitenav__hamburger {
@@ -150,11 +152,11 @@ export default {
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 860px) {
   .sitenav {
     display: grid;
     grid-template-columns: 1fr minmax(800px, 1000px) 1fr;
-    height: auto;
+    align-items: start;
   }
 
   .sitenav__logo {
@@ -163,6 +165,36 @@ export default {
     grid-row: 1;
     justify-self: left;
     padding: 0 var(--spacer);
+    line-height: 1;
+  }
+
+  .sitenav__logo a {
+    text-decoration: none;
+    position: relative;
+  }
+
+  .sitenav__logo a:hover,
+  .sitenav__logo a:focus {
+    color: var(--color-white);
+    outline: none;
+  }
+
+  .sitenav__logo a::before,
+  .sitenav__logo a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0.1em;
+    right: 0;
+    left: 0;
+    border-bottom: 0.1em solid var(--color-white);
+    transform: scale(0, 1);
+    transition: transform var(--ease-primary) var(--duration-short);
+  }
+
+  .sitenav__logo a:hover::before,
+  .sitenav__logo a:focus::before {
+    transform: scale(0.8, 1);
   }
 
   .sitenav__list {
@@ -201,9 +233,14 @@ export default {
   @supports (clip-path: polygon(0 0)) {
     .sitenav {
       box-sizing: content-box;
-      padding-bottom: 3vw;
-      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%);
-      margin-bottom: -3vw;
+      padding-bottom: var(--nav-slant);
+      clip-path: polygon(
+        0 0,
+        100% 0,
+        100% calc(100% - var(--nav-slant)),
+        0 100%
+      );
+      margin-bottom: calc(-1 * var(--nav-slant));
     }
 
     .sitenav__logo {
@@ -213,12 +250,12 @@ export default {
 
     .sitenav__link {
       box-sizing: content-box;
-      padding-bottom: 3vw;
+      padding-bottom: var(--nav-slant);
     }
 
     .sitenav__item:last-child .sitenav__link {
       clip-path: none;
-      padding-bottom: 3vw;
+      padding-bottom: var(--nav-slant);
     }
   }
 }

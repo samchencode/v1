@@ -63,7 +63,23 @@ export default {
   position: relative;
 }
 
+.content__section:target::before {
+  content: '';
+  display: block;
+  height: var(--nav-height);
+  margin-top: calc(-1 * var(--nav-height));
+  visibility: hidden;
+}
+
 .content__footer {
   height: 10vh;
+}
+
+@media screen and (min-width: 860px) {
+  @supports (clip-path: polygon(0 0)) {
+    .content__section:nth-child(2):target::before {
+      margin-top: calc(-1 * (var(--nav-height) + var(--nav-slant)));
+    }
+  }
 }
 </style>

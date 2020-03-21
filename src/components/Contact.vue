@@ -23,9 +23,9 @@ export default {
 <style scoped>
 .contact {
   display: grid;
-  height: calc(90vh - 5em);
+  height: calc(90vh - var(--nav-height));
   grid-template-rows: 1fr repeat(3, auto) 2fr;
-  padding: var(--spacer);
+  padding: 0 var(--spacer);
   row-gap: var(--spacer);
 }
 
@@ -47,11 +47,12 @@ export default {
   align-self: start;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 860px) {
 
   .contact {
-    padding: 0;
     grid-template-columns: 1fr minmax(800px, 1000px) 1fr;
+    padding: 0;
+    grid-column-gap: var(--spacer);
   }
 
   .contact__subtitle,

@@ -1,10 +1,12 @@
 <template>
   <section id="proficiencies" class="proficiencies">
-    <header class="proficiencies__header">
-      <h3 class="proficiencies__subtitle">Proficiencies</h3>
-      <h2 class="proficiencies__title">Stuff I Use</h2>
-    </header>
-    <PackDisplay class="proficiencies__pack" />
+    <div class="proficiencies__grid-container">
+      <hgroup class="proficiencies__header">
+        <h3 class="proficiencies__subtitle">Proficiencies</h3>
+        <h2 class="proficiencies__title">Stuff I Use</h2>
+      </hgroup>
+      <PackDisplay class="proficiencies__pack" />
+    </div>
   </section>
 </template>
 
@@ -18,8 +20,8 @@ export default {
 </script>
 
 <style>
-.proficiencies {
-  height: calc(100vh - 5rem);
+.proficiencies__grid-container {
+  height: calc(100vh - var(--nav-height));
   overflow: hidden;
   display: grid;
   grid-template-columns: var(--spacer) 1fr var(--spacer);
@@ -37,13 +39,13 @@ export default {
   grid-row: -3;
 }
 
-@media screen and (min-width: 800px) {
-  .proficiencies {
+@media screen and (min-width: 860px) {
+  .proficiencies__grid-container {
     grid-template-columns: 1fr repeat(8, minmax(100px, 125px)) 1fr;
     grid-template-rows: repeat(12, 1fr);
   }
 
-  .proficiencies::before {
+  .proficiencies__grid-container::after {
     content: '';
     border-left: 1px solid var(--color-white);
     border-right: 1px solid var(--color-white);

@@ -1,8 +1,5 @@
 <template>
-  <figure
-    class="card"
-    :style="`--image-url: url(${imageUrl});`"
-  >
+  <figure class="card" :style="`--image-url: url(${imageUrl});`">
     <div class="card__image">
       <div class="card__btn-group">
         <LinkIcon class="card__linkicon" href="#" iconClass="fas fa-link" />
@@ -36,7 +33,7 @@ export default {
 .card {
   display: grid;
   grid-template-rows: minmax(40%, 1fr) auto;
-  height: calc(90vh - 5em);
+  height: calc(90vh - var(--nav-height));
 }
 
 .card__image,
@@ -118,7 +115,7 @@ export default {
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 860px) {
   .card {
     grid-template-columns: 1fr repeat(8, minmax(100px, 125px)) 1fr;
     grid-template-rows: repeat(8, 1fr);
@@ -153,7 +150,7 @@ export default {
     display: grid;
     padding: 0;
     background-attachment: scroll;
-    grid-row: 1 / 9;
+    grid-row: 1 / -1;
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -232,10 +229,10 @@ export default {
     grid-column: 6;
   }
 
-  .card__linkicon {
+  a.card__linkicon {
     opacity: 0;
     transition: opacity var(--duration-short) var(--ease-primary);
-    font-size: 4em;
+    font-size: calc(3em - 1vw + 2vh);
   }
 
   .card__linkicon:nth-child(1) {
@@ -244,6 +241,12 @@ export default {
 
   .card__linkicon:nth-child(2) {
     transition-delay: 0ms;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  a.card__linkicon {
+    font-size: calc(3em - 10px + 2vh);
   }
 }
 </style>

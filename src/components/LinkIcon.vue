@@ -36,7 +36,7 @@ export default {
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 860px) {
   .linkicon {
     font-size: 3em;
     margin-bottom: 0.1em;

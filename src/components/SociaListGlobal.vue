@@ -53,7 +53,7 @@ export default {
   display: none;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 860px) {
   .socialist {
     flex-direction: column;
   }

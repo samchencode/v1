@@ -33,7 +33,7 @@ export default {
   color: var(--color-black);
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 860px) {
   .button {
     font-size: 1.5rem;
     letter-spacing: 5px;

@@ -29,10 +29,13 @@ export default {
   align-items: start;
 }
 
-.footer::before,
+.footer::before {
+  grid-column: 2 / -4;
+}
+
 .footer__github,
 .footer__copyright {
-  grid-column: 2 / -4;
+  grid-column: 2 / -2;
 }
 
 .footer::before,
@@ -60,9 +63,10 @@ export default {
   grid-row: 2;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 860px) {
   .footer {
     grid-template-columns: 1fr repeat(8, minmax(100px, 125px)) 1fr;
+    grid-column-gap: var(--spacer);
   }
 }
 </style>
