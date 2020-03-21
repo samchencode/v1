@@ -50,8 +50,9 @@ export default {
 @media screen and (min-width: 860px) {
 
   .contact {
-    padding: 0;
     grid-template-columns: 1fr minmax(800px, 1000px) 1fr;
+    padding: 0;
+    grid-column-gap: var(--spacer);
   }
 
   .contact__subtitle,
