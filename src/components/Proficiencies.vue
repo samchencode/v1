@@ -39,7 +39,7 @@ export default {
   grid-row: -3;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 860px) {
   .proficiencies__grid-container {
     grid-template-columns: 1fr repeat(8, minmax(100px, 125px)) 1fr;
     grid-template-rows: repeat(12, 1fr);

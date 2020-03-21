@@ -29,7 +29,7 @@ export default {
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 860px) {
   .label {
     font-size: 1.3rem;
     letter-spacing: 5px;

@@ -47,7 +47,7 @@ export default {
   align-self: start;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 860px) {
 
   .contact {
     padding: 0;

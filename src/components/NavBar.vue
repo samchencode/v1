@@ -152,7 +152,7 @@ export default {
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 860px) {
   .sitenav {
     display: grid;
     grid-template-columns: 1fr minmax(800px, 1000px) 1fr;

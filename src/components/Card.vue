@@ -115,7 +115,7 @@ export default {
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 860px) {
   .card {
     grid-template-columns: 1fr repeat(8, minmax(100px, 125px)) 1fr;
     grid-template-rows: repeat(8, 1fr);

@@ -50,7 +50,7 @@ export default {
   align-self: center;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 860px) {
   .hero {
     max-width: 1000px;
     min-width: 800px;
