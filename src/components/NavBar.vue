@@ -167,6 +167,36 @@ export default {
     padding: 0 var(--spacer);
   }
 
+  .sitenav__logo a {
+    text-decoration: none;
+    cursor: default;
+    position: relative;
+  }
+
+  .sitenav__logo a:hover,
+  .sitenav__logo a:focus {
+    color: var(--color-white);
+    outline: none;
+  }
+
+  .sitenav__logo a::before,
+  .sitenav__logo a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0.1em;
+    right: 0;
+    left: 0;
+    border-bottom: 0.1em solid var(--color-white);
+    transform: scale(0, 1);
+    transition: transform var(--ease-primary) var(--duration-short);
+  }
+
+  .sitenav__logo a:hover::before,
+  .sitenav__logo a:focus::before {
+    transform: scale(0.8, 1);
+  }
+
   .sitenav__list {
     position: static;
     width: auto;
