@@ -25,7 +25,7 @@ export default {
   display: grid;
   height: calc(90vh - var(--nav-height));
   grid-template-rows: 1fr repeat(3, auto) 2fr;
-  padding: var(--spacer);
+  padding: 0 var(--spacer);
   row-gap: var(--spacer);
 }
 

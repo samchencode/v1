@@ -156,7 +156,7 @@ export default {
   .sitenav {
     display: grid;
     grid-template-columns: 1fr minmax(800px, 1000px) 1fr;
-    height: auto;
+    align-items: start;
   }
 
   .sitenav__logo {
@@ -165,11 +165,11 @@ export default {
     grid-row: 1;
     justify-self: left;
     padding: 0 var(--spacer);
+    line-height: 1;
   }
 
   .sitenav__logo a {
     text-decoration: none;
-    cursor: default;
     position: relative;
   }
 
@@ -233,9 +233,14 @@ export default {
   @supports (clip-path: polygon(0 0)) {
     .sitenav {
       box-sizing: content-box;
-      padding-bottom: 3vw;
-      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%);
-      margin-bottom: -3vw;
+      padding-bottom: var(--nav-slant);
+      clip-path: polygon(
+        0 0,
+        100% 0,
+        100% calc(100% - var(--nav-slant)),
+        0 100%
+      );
+      margin-bottom: calc(-1 * var(--nav-slant));
     }
 
     .sitenav__logo {
@@ -245,12 +250,12 @@ export default {
 
     .sitenav__link {
       box-sizing: content-box;
-      padding-bottom: 3vw;
+      padding-bottom: var(--nav-slant);
     }
 
     .sitenav__item:last-child .sitenav__link {
       clip-path: none;
-      padding-bottom: 3vw;
+      padding-bottom: var(--nav-slant);
     }
   }
 }
