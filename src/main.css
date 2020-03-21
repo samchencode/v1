@@ -57,7 +57,7 @@
   --font-size-5: 0.83rem;
 
   /* Navbar Settings */
-  --nav-height: 5rem;
+  --nav-height: 10vh;
 }
 
 /* 
@@ -92,6 +92,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

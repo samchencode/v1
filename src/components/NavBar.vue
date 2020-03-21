@@ -1,16 +1,18 @@
 <template>
   <nav :class="['sitenav', modifierClassNames]">
-    <h2 class="sitenav__logo">Sam Chen</h2>
+    <h2 class="sitenav__logo">
+      <a href="#">Sam Chen</a>
+    </h2>
     <input type="checkbox" id="sitenav__toggle" class="sitenav__toggle" />
     <ul class="sitenav__list">
       <li class="sitenav__item">
-        <a href="#" class="sitenav__link">Projects</a>
+        <a href="#spotlight" class="sitenav__link">Projects</a>
       </li>
       <li class="sitenav__item">
-        <a href="#" class="sitenav__link">Proficiencies</a>
+        <a href="#proficiencies" class="sitenav__link">Proficiencies</a>
       </li>
       <li class="sitenav__item">
-        <a href="#" class="sitenav__link">Contact</a>
+        <a href="#contact" class="sitenav__link">Contact</a>
       </li>
     </ul>
     <label for="sitenav__toggle" class="sitenav__toggle-label">
@@ -62,7 +64,7 @@ export default {
   height: var(--font-size-2);
   width: var(--font-size-2);
   margin-left: var(--spacer);
-  cursor: pointer;
+  cursor: default;
 }
 
 .sitenav__hamburger {
