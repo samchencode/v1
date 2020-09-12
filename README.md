@@ -1,7 +1,7 @@
 # Sam Chen's Portfolio v1
 
 The first version of my portfolio website, built with 
-[Vue](https://vuejs.org/), [D3.js](https://d3js.org/), and [Firebase](https://firebase.google.com/), hosted on [Github Pages](https://pages.github.com/)
+[Vue](https://vuejs.org/) and [D3.js](https://d3js.org/), hosted on [Github Pages](https://pages.github.com/)
 
 ## 🚀 Set up 
 > This requires `git`, Node.js, and `yarn` installed.
